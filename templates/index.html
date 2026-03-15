@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="chat-app">
+
+<!-- HEADER -->
+<div class="header">
+
+<div class="left">
+<img src="https://i.pravatar.cc/40?img=5" class="profile">
+
+<div>
+<div class="name">Mini</div>
+<div class="status">online</div>
+</div>
+</div>
+
+<div class="right">
+
+<label class="auto-toggle">
+<input type="checkbox" id="autoTranslateToggle">
+<span>Auto</span>
+</label>
+
+<div class="menu">⋮</div>
+
+</div>
+
+</div>
+
+
+<!-- CHAT AREA -->
+<div class="chat-area" id="chatBox">
+<!-- ⭐ EMPTY — messages will come dynamically -->
+</div>
+
+
+<!-- INPUT BAR -->
+<div class="input-bar">
+
+<span class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="#54656f">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 
+7-13c0-3.87-3.13-7-7-7zm0 
+9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 
+6.5 12 6.5s2.5 1.12 2.5 
+2.5-1.12 2.5-2.5 2.5z"/>
+</svg>
+</span>
+
+<input id="msgInput" placeholder="Type a message">
+
+<span class="icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="#54656f">
+<path d="M12 14c1.66 0 3-1.34 
+3-3V5c0-1.66-1.34-3-3-3S9 
+3.34 9 5v6c0 1.66 1.34 
+3 3 3zm5-3c0 2.76-2.24 
+5-5 5s-5-2.24-5-5H5c0 
+3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 
+6-3.39 6-6.92h-2z"/>
+</svg>
+</span>
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
