@@ -1,6 +1,4 @@
 let autoTranslate = false
-
-// ⭐ TOGGLE
 let toggle = document.getElementById("autoTranslateToggle")
 
 if(toggle){
@@ -12,7 +10,6 @@ applyAutoTranslate()
 })
 }
 
-// ⭐ GET CURRENT TIME
 function getTime(){
 
 let now = new Date()
@@ -30,8 +27,6 @@ m = m < 10 ? "0"+m : m
 return h + ":" + m + " " + ampm
 
 }
-
-// ⭐ OPTIONS
 function toggleOptions(msg){
 
 let allOptions = document.querySelectorAll(".options")
@@ -42,7 +37,6 @@ options.style.display = "block"
 
 }
 
-// ⭐ SEND
 function sendMessage(){
 
 let input = document.getElementById("msgInput")
@@ -80,7 +74,6 @@ startTeluguConversation()
 
 }
 
-// ⭐ MAIN TELUGU FLOW
 function startTeluguConversation(){
 
 let chatBox = document.getElementById("chatBox")
@@ -133,8 +126,6 @@ translateMessage(btn)
 })
 
 }
-
-// ⭐ DOTS
 function showDots(){
 
 let chatBox = document.getElementById("chatBox")
@@ -163,7 +154,6 @@ if(dots) dots.remove()
 
 }
 
-// ⭐ TOP TYPING
 function showTyping(){
 
 let chatBox = document.getElementById("chatBox")
@@ -188,7 +178,6 @@ let typing = document.getElementById("typingIndicator")
 if(typing) typing.remove()
 }
 
-// ⭐ GLOBAL AUTO
 function applyAutoTranslate(){
 
 let allBubbles = document.querySelectorAll(".message.received .bubble")
@@ -227,7 +216,6 @@ bubble.innerText = original
 
 }
 
-// ⭐ INDIVIDUAL
 async function translateMessage(btn){
 
 let bubble = btn.parentElement.parentElement.querySelector(".bubble")
@@ -255,7 +243,6 @@ btn.parentElement.style.display = "none"
 
 }
 
-// ⭐ ORIGINAL
 function showOriginal(btn){
 
 let bubble = btn.parentElement.parentElement.querySelector(".bubble")
@@ -265,7 +252,6 @@ btn.parentElement.style.display = "none"
 
 }
 
-// ⭐ CLICK
 let chatBox = document.getElementById("chatBox")
 
 chatBox.addEventListener("click", function(e){
@@ -274,7 +260,6 @@ toggleOptions(e.target)
 }
 })
 
-// ⭐ ENTER
 let inputBox = document.getElementById("msgInput")
 
 inputBox.addEventListener("keypress", function(e){
